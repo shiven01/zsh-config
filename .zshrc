@@ -1,0 +1,38 @@
+# File Traversing:
+alias lha='ls -lAh'
+alias symlink='ln -sfvn'
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# Git Configs:
+trace() {
+  GIT_TRACE=1 eval "$@"
+}
+alias gst='git status'
+alias gck='git checkout'
+alias gb='git branch'
+alias gp='git pull'
+alias gc='git commit'
+alias ga='git add'
+
+
+export PATH="/opt/homebrew/opt/python@3.14/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/shivenshekar/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# bun completions
+[ -s "/Users/shivenshekar/.bun/_bun" ] && source "/Users/shivenshekar/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# fnm
+eval "$(fnm env --use-on-cd --shell zsh)"
+export PATH="$HOME/.local/bin:$PATH"
