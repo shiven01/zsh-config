@@ -4,6 +4,9 @@ alias symlink='ln -sfvn'
 alias ..='cd ..'
 alias ...='cd ../..'
 
+# Shortcuts
+## ~/Zed → ~/Library/Application Support/Zed (symlink)
+
 # Git Configs:
 trace() {
   GIT_TRACE=1 eval "$@"
@@ -25,13 +28,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-# bun completions
-[ -s "/Users/shivenshekar/.bun/_bun" ] && source "/Users/shivenshekar/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 # fnm
 eval "$(fnm env --use-on-cd --shell zsh)"
