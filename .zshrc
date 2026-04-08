@@ -5,6 +5,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 # Shortcuts
+alias ccview='cclogviewer -input' ## https://github.com/Brads3290/cclogviewer
 ## ~/Zed → ~/Library/Application Support/Zed (symlink)
 
 # Git Configs:
@@ -32,3 +33,4 @@ esac
 # fnm
 eval "$(fnm env --use-on-cd --shell zsh)"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
