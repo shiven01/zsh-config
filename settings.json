@@ -20,6 +20,11 @@ alias gc='git commit'
 alias ga='git add'
 
 
+# Zsh Autocompletions (brew)
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+fi
+
 export PATH="/opt/homebrew/opt/python@3.14/bin:$PATH"
 
 # pnpm
